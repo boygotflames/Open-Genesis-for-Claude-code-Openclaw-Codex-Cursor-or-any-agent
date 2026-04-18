@@ -1,0 +1,49 @@
+{
+  "layer1": {
+    "mission": "Preserve current repository truth for the next operator.",
+    "realityAnchors": [
+      "README.md",
+      "docs/SPEC.md"
+    ],
+    "boundaryDefinition": {
+      "kind": "system-boundaries",
+      "items": [
+        "Owns the framework repository surfaces."
+      ]
+    },
+    "invariants": [
+      "Preserve the mandatory three-layer core."
+    ],
+    "activeRisks": [
+      "Downstream wording drift can outrun the frozen contract."
+    ],
+    "nonGoals": [
+      "Do not turn genesis.md into public repository documentation."
+    ]
+  },
+  "presentWizard": {
+    "requiredEntryFields": [
+      "dateOrTimestamp",
+      "actor",
+      "scope",
+      "realityChecked",
+      "decisions",
+      "changes",
+      "verification",
+      "openThreads",
+      "nextStep"
+    ],
+    "ledger": []
+  },
+  "layer3": {
+    "readFirst": [
+      "Read Layer 1 and Layer 3 before substantial work."
+    ],
+    "workingRules": [
+      "Prefer stronger reality anchors over stale summaries."
+    ],
+    "updateProtocol": [
+      "Insert a new Present Wizard entry after meaningful work."
+    ]
+  }
+}

@@ -1,5 +1,9 @@
 # Genesis Framework
 
+<p align="center">
+  <img src="assets/Genesis.png" alt="Diagram showing genesis.md as the mandatory continuity gate between one workflow and multiple AI agents, with rich-context and poor-context routes around it." width="920">
+</p>
+
 Genesis Framework is an engineering methodology for AI-assisted repositories.
 It exists because agents can hallucinate architecture, forget repo truth,
 silently drift across sessions, and overclaim confidence long after reality has
