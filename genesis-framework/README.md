@@ -1,73 +1,91 @@
 # Genesis Framework
 
-Genesis Framework is a continuity standard for AI-assisted repositories.
-It exists for teams that have seen agents drift away from repo reality, forget
-architectural constraints, overstate progress, or silently invent consensus.
+Genesis Framework is an engineering methodology for AI-assisted repositories.
+It exists because agents can hallucinate architecture, forget repo truth,
+silently drift across sessions, and overclaim confidence long after reality has
+changed.
 
-The framework centers on a private-by-default `genesis.md` file that keeps three
-things together:
+The framework centers on `genesis.md`: a private, local-only continuity file
+for the live working repository. It is not public repository documentation. It
+is the operational surface that keeps current repo reality, session history,
+and next-session working rules tied together.
 
-1. Macro reality: what is true about the system right now.
-2. Present Wizard: an append-only session ledger of meaningful work.
-3. Mini guide: operating rules for the next agent or operator.
+## Framework Core
 
-## Why this exists
+Genesis Framework is built on a mandatory three-layer skeleton:
 
-AI workflows fail in repeatable ways:
+1. `Layer 1: Macro Reality`
+   Current repository truth, reality anchors, boundaries, invariants, and drift
+   pressure.
+2. `Present Wizard`
+   A mandatory operating ledger of meaningful work, kept
+   reverse-chronological, newest-first, top-inserted, and append-only in
+   retained history.
+3. `Layer 3: Mini Guide`
+   A mandatory operating manual that constrains how the next human or agent
+   should work.
 
-- Agents hallucinate architecture that is not in the codebase.
-- Session context collapses and prior decisions disappear.
-- Repositories accumulate intent in scattered chat logs instead of durable truth.
-- Teams mistake fluent summaries for verified understanding.
+This repository publishes the framework. Your live `genesis.md` remains local
+continuity memory for the target repository.
 
-Genesis Framework addresses those failures with explicit structure rather than
-vague prompting advice.
+## What `genesis.md` Is And Is Not
 
-## What lives in this repository
+`genesis.md` is:
 
-- `docs/`: philosophy, spec, adoption guidance, governance, and FAQ.
-- `templates/`: copy-pasteable starting points for standard and complex repos.
-- `examples/`: fully worked examples across different engineering realities.
-- `schemas/`: machine-readable validation surface for future tooling.
-- `.github/`: contribution intake that keeps changes disciplined.
+- private, local-only continuity memory
+- a working anti-drift artifact for humans and agents
+- a place to record current repo truth, verified session history, and
+  next-session operating constraints
 
-## What does not live here
+`genesis.md` is not:
 
-This repository is public teaching material. Your project-specific `genesis.md`
-usually should not be public. The framework teaches teams to keep their live
-continuity artifact local to the operating repository and exclude it from
-version control unless they have an explicit reason not to.
+- public repository documentation
+- a replacement for `README.md`, architecture docs, issue history, or release
+  notes
+- a polished retrospective narrative
+- a prompt pack or generic markdown habit
 
-## Quick start
+## Authority Stack
+
+Genesis Framework separates its authority surfaces on purpose:
+
+- `docs/PHILOSOPHY.md`: doctrine
+- `docs/SPEC.md`: compliance contract
+- `docs/GOVERNANCE.md`: change-control model
+- `templates/`: operational adoption surfaces derived from the spec
+- `examples/`: proof that the same framework adapts to different repo shapes
+- `schemas/`: machine-readable structural validation, not semantic authority
+
+These surfaces are not peers. Philosophy explains why the framework exists.
+Specification defines what is compliant. Everything else is downstream.
+
+## Start Here
 
 1. Read `docs/PHILOSOPHY.md` to understand the failure model.
-2. Read `docs/SPEC.md` for the non-negotiable contract.
+2. Read `docs/SPEC.md` to understand the non-negotiable contract.
 3. Choose `templates/standard/genesis.md` or `templates/complex/genesis.md`.
-4. Fill Layer 1 from actual repo truth, not aspirations.
-5. Use the Present Wizard ledger after every meaningful work session.
-6. Keep Layer 3 short, actionable, and grounded in current practice.
+4. Inspect `examples/README.md` and the example suite to see the same contract
+   under different repo pressures.
+5. Adopt the framework locally inside the target repository and keep the live
+   `genesis.md` out of public documentation flow.
 
-## Design stance
+## Repository Map
 
-Genesis Framework separates:
+- `docs/PHILOSOPHY.md`: why AI-assisted development needs continuity memory
+- `docs/SPEC.md`: the hard standard for compliant `genesis.md`
+- `docs/GOVERNANCE.md`: how the framework changes without silent drift
+- `docs/ADOPTION_GUIDE.md`: practical rollout guidance for real teams
+- `docs/FAQ.md`: answers to predictable misuse and misunderstanding
+- `templates/README.md`: how to choose and adapt a template
+- `examples/README.md`: how to read the proof suite
+- `schemas/README.md`: what schema validation can and cannot honestly prove
 
-- manifesto from hard specification
-- adoption artifacts from proof-by-example
-- governance from doctrine
-- human teaching from machine validation
+## Design Stance
 
-That separation is not cosmetic. It is how the framework prevents the same
-drift problems it is trying to solve.
-
-## Repository map
-
-- `docs/PHILOSOPHY.md`: why the framework exists
-- `docs/SPEC.md`: what compliant `genesis.md` files must contain
-- `docs/ADOPTION_GUIDE.md`: how to roll the framework into a real team
-- `docs/GOVERNANCE.md`: how this repository evolves
-- `templates/README.md`: how to choose and adapt templates
-- `examples/README.md`: what each example is trying to teach
-- `schemas/README.md`: what the schema validates and what it cannot
+Genesis Framework treats continuity as an engineering concern, not a prompting
+style. It separates doctrine from contract, adoption from proof, and machine
+validation from human judgment so the repository does not teach the same drift
+patterns it is trying to prevent.
 
 ## License
 

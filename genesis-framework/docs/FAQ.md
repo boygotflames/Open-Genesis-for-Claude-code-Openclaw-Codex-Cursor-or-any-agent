@@ -1,42 +1,79 @@
 # FAQ
 
-## Why keep `genesis.md` private by default?
+## Why not just use the README or project docs?
 
-Because live continuity notes often include unstable truth, risk posture, and
-operator-facing context that is useful internally but awkward or unsafe as
-public documentation.
+Because public docs and operational continuity do different jobs. Public docs
+optimize for stable explanation. `genesis.md` optimizes for current working
+truth, active drift, recent verification, and next-session constraint.
 
-## Why not just put this in `README.md`?
+## Why must `genesis.md` remain local-only?
 
-`README.md` is public-facing orientation. `genesis.md` is local operational
-continuity. Mixing them collapses two different jobs into one stale document.
+Because the most useful continuity truth is often unstable, blunt, and
+operator-facing. Keeping the live file local protects it from being rewritten
+into public narrative and preserves room for brutal honesty about uncertainty
+and drift.
 
-## Does this replace architecture docs?
+## Isn't this just another template?
 
-No. It complements them. Layer 1 points at reality anchors; it does not replace
-the deeper documentation those anchors may contain.
+No. Templates are downstream adoption surfaces. Genesis Framework is a
+methodology with doctrine, a compliance contract, operational templates,
+example proofs, schema boundaries, and governance.
 
-## When should I use the standard template?
+## Why is Present Wizard mandatory?
 
-Use it for most repos with one main product surface, manageable subsystem count,
-and modest drift pressure.
+Because continuity fails when session history collapses into vague memory or
+clean retrospective prose. Present Wizard is the mandatory operating ledger for
+what was checked, what changed, what was verified, what remains unresolved, and
+what the next session should do.
 
-## When should I use the complex template?
+## Why not let the AI re-read the whole file every time?
 
-Use it when subsystem sprawl, multi-team ownership, cross-cutting constraints,
-or migration risk make the standard template too compressed.
+Because rereading everything is not the same as reading well. Layer 3 exists to
+focus the next operator on the right anchors, the right ledger entries, and the
+right behavioral constraints. Whole-file rereads alone waste time and still do
+not prevent drift.
 
-## Can I customize the framework?
+## What is the difference between standard and complex?
 
-Yes, but customization should preserve the three-layer contract. Snippets exist
-to support controlled variation without changing the doctrine.
+They are two sanctioned shapes of the same framework. `standard` keeps Layer 1
+lean for ordinary repositories. `complex` expands Layer 1 when subsystem,
+ownership, interface, or coordination pressure would otherwise be hidden.
 
-## Can a model maintain this file for me?
+## When should a team upgrade from standard to complex?
 
-Yes, but only if the operator expects verification discipline. A model can
-append confident fiction just as easily as useful continuity.
+Upgrade when a compact Layer 1 can no longer honestly represent the repository.
+Typical triggers are subsystem sprawl, cross-team interfaces, heavy migration
+pressure, or repeated coordination drift.
 
-## What does the schema validate?
+## Can teams adapt Layer 1?
 
-The schema validates a structured representation of the framework. It does not
-decide whether the content is honest, current, or well-judged.
+Yes, inside the configurable boundary defined by the spec. Teams may rename
+subsections, choose `System Boundaries` or `Domain Map`, and add ownership or
+coordination detail. They may not remove required Layer 1 information classes
+or weaken the three-layer core.
+
+## Do examples define the framework?
+
+No. Examples are proof material. They demonstrate the same contract under
+different repo pressures. They are downstream of the spec and templates and do
+not create alternate doctrine.
+
+## Does passing the schema mean the file is good?
+
+No. The schema validates structure, not judgment. A schema-valid file can still
+be stale, evasive, inaccurate, or operationally weak.
+
+## What parts are truly non-negotiable?
+
+These are core framework invariants:
+
+- `genesis.md` is private, local-only continuity memory
+- `genesis.md` is not public repository documentation
+- the three-layer skeleton is mandatory
+- Present Wizard is mandatory
+- Present Wizard remains reverse-chronological and append-only in retained
+  history
+- Layer 3 remains an operating manual for agent and operator behavior
+- templates, examples, and schema remain subordinate to the spec
+
+If those are removed or weakened, the file has left Genesis Framework.
