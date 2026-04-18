@@ -2,26 +2,56 @@
 
 Describe the change in one short paragraph.
 
-## Surface affected
+## Change category
 
-- [ ] Philosophy
-- [ ] Spec
-- [ ] Template
-- [ ] Example
-- [ ] Schema
-- [ ] Process
+- [ ] Philosophy change
+- [ ] Spec change
+- [ ] Governance change
+- [ ] Template change
+- [ ] Example change
+- [ ] Schema change
+- [ ] Adoption-surface change
+- [ ] Contributor-surface change
 
-## Why this change is needed
+## Authoritative surface
 
-Explain the concrete problem being solved.
+- [ ] `docs/PHILOSOPHY.md`
+- [ ] `docs/SPEC.md`
+- [ ] `docs/GOVERNANCE.md`
+- [ ] Downstream surface only
 
-## Alignment checks
+State which surface is authoritative for this PR and why.
 
-- [ ] I checked `docs/SPEC.md` for normative impact.
-- [ ] I updated related docs, templates, examples, or schema where needed.
-- [ ] I did not smuggle a spec change into an example-only or template-only edit.
-- [ ] I preserved the three-layer model and private-by-default stance.
+## Contract impact
 
-## Reviewer notes
+- [ ] Changes doctrine
+- [ ] Changes compliance contract
+- [ ] Changes governance or synchronization rules
+- [ ] Changes downstream surfaces only
 
-Call out any parts that deserve especially careful review.
+Explain the exact impact. If this is downstream-only, explain why it does not
+reinterpret the framework.
+
+## Downstream synchronization
+
+List every file or surface that needed alignment or still needs follow-up.
+
+## Terminology
+
+- [ ] No new terminology was introduced
+- [ ] New terminology was introduced or an existing term was narrowed or redefined
+
+If terminology changed, explain it precisely.
+
+## Verification
+
+- [ ] I checked the change against `docs/PHILOSOPHY.md`, `docs/SPEC.md`, and `docs/GOVERNANCE.md` as applicable.
+- [ ] I identified whether this is an upstream change or a downstream alignment change.
+- [ ] I updated dependent surfaces where required, or I called out intentional deferrals.
+- [ ] I did not hide a spec change inside a template, example, schema, or contributor-surface edit.
+- [ ] I checked for terminology drift and authority-order drift.
+
+## Reviewer focus
+
+Call out the places where reviewers should look hardest for hidden drift,
+contract changes, or downstream misalignment.

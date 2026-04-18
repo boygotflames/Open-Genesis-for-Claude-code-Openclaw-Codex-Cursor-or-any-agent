@@ -1,42 +1,58 @@
 ---
 name: Bug report
-about: Report a defect in framework behavior, examples, schema, or interpretation
+about: Report a concrete framework defect, contradiction, or downstream drift
 title: "[Bug] "
 labels: bug
 assignees: ""
 ---
 
-## Surface
+## Affected surface
 
-- Philosophy
-- Spec
-- Template
-- Example
-- Schema
-- Contribution process
+- [ ] Philosophy
+- [ ] Spec
+- [ ] Governance
+- [ ] Template
+- [ ] Example
+- [ ] Schema
+- [ ] Adoption surface
+- [ ] Contributor surface
 
-## What broke
+## Defect type
 
-Describe the failure in concrete terms. Focus on where the framework no longer
-matches reality, not only where it felt awkward.
+- [ ] Doctrinal contradiction
+- [ ] Structural inconsistency
+- [ ] Unclear or misleading wording
+- [ ] Downstream drift
+- [ ] Tooling or schema limitation
+
+## Files or paths involved
+
+List the exact files, headings, template paths, or schema paths involved.
+
+## Current behavior
+
+Describe the concrete mismatch or defect. Be specific about what the repository
+currently says or does.
 
 ## Expected behavior
 
-Describe what the repository, template, or example should have made clear.
+Describe what should happen instead under the current framework contract.
 
-## Observed behavior
+## Framework core or downstream surface?
 
-Describe what actually happened.
+State whether this is a defect in the framework itself or in a downstream
+teaching or contributor surface.
 
-## Reproduction path
+## Reproduction or inspection path
 
-List the documents, templates, or steps that produced the problem.
+List the reading path, comparison, or steps that exposed the defect.
 
 ## Impact
 
-Explain whether this creates drift, ambiguity, bad adoption behavior, or tooling
-confusion.
+Explain whether this creates doctrinal confusion, contract ambiguity,
+downstream misalignment, bad adoption behavior, or review drift.
 
-## Suggested fix
+## Additional context
 
-Optional. If you have a precise correction, include it here.
+Optional. Include a precise correction or synchronization suggestion if you
+have one.
