@@ -1,0 +1,313 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://genesis-framework.example/schemas/genesis.schema.json",
+  "title": "Genesis Framework Document",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "metadata",
+    "layer1",
+    "presentWizard",
+    "layer3"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "template",
+        "lastReviewed"
+      ],
+      "properties": {
+        "template": {
+          "type": "string",
+          "enum": [
+            "standard",
+            "complex",
+            "custom"
+          ]
+        },
+        "lastReviewed": {
+          "type": "string",
+          "format": "date"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "layer1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mission",
+        "realityAnchors",
+        "invariants",
+        "activeRisks",
+        "nonGoals"
+      ],
+      "anyOf": [
+        {
+          "required": [
+            "systemBoundaries"
+          ]
+        },
+        {
+          "required": [
+            "domainMap"
+          ]
+        }
+      ],
+      "properties": {
+        "mission": {
+          "type": "string",
+          "minLength": 1
+        },
+        "realityAnchors": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "domainMap": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "systemBoundaries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "invariants": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "activeRisks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "ownershipAndInterfaces": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "nonGoals": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "extensions": {
+          "type": "object"
+        }
+      }
+    },
+    "presentWizard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entryTemplate",
+        "ledger"
+      ],
+      "properties": {
+        "entryTemplate": {
+          "type": "array",
+          "minItems": 9,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "allOf": [
+            {
+              "contains": {
+                "const": "date"
+              }
+            },
+            {
+              "contains": {
+                "const": "actor"
+              }
+            },
+            {
+              "contains": {
+                "const": "realityChecked"
+              }
+            },
+            {
+              "contains": {
+                "const": "decisions"
+              }
+            },
+            {
+              "contains": {
+                "const": "changes"
+              }
+            },
+            {
+              "contains": {
+                "const": "verification"
+              }
+            },
+            {
+              "contains": {
+                "const": "openThreads"
+              }
+            },
+            {
+              "contains": {
+                "const": "nextStep"
+              }
+            }
+          ],
+          "anyOf": [
+            {
+              "contains": {
+                "const": "scope"
+              }
+            },
+            {
+              "contains": {
+                "const": "subsystemsTouched"
+              }
+            }
+          ]
+        },
+        "ledger": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "date",
+              "actor",
+              "realityChecked",
+              "decisions",
+              "changes",
+              "verification",
+              "openThreads",
+              "nextStep"
+            ],
+            "anyOf": [
+              {
+                "required": [
+                  "scope"
+                ]
+              },
+              {
+                "required": [
+                  "subsystemsTouched"
+                ]
+              }
+            ],
+            "properties": {
+              "date": {
+                "type": "string",
+                "format": "date"
+              },
+              "actor": {
+                "type": "string",
+                "minLength": 1
+              },
+              "scope": {
+                "type": "string",
+                "minLength": 1
+              },
+              "subsystemsTouched": {
+                "type": "string",
+                "minLength": 1
+              },
+              "realityChecked": {
+                "type": "string",
+                "minLength": 1
+              },
+              "decisions": {
+                "type": "string",
+                "minLength": 1
+              },
+              "changes": {
+                "type": "string",
+                "minLength": 1
+              },
+              "verification": {
+                "type": "string",
+                "minLength": 1
+              },
+              "crossTeamImpact": {
+                "type": "string",
+                "minLength": 1
+              },
+              "openThreads": {
+                "type": "string",
+                "minLength": 1
+              },
+              "nextStep": {
+                "type": "string",
+                "minLength": 1
+              },
+              "extensions": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "layer3": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "readThisFirst",
+        "workingRules",
+        "updateProtocol"
+      ],
+      "properties": {
+        "readThisFirst": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "workingRules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "updateProtocol": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
