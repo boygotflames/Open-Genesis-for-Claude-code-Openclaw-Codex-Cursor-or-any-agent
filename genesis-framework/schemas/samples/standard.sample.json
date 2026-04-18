@@ -1,0 +1,71 @@
+{
+  "profile": "standard",
+  "layer1": {
+    "mission": "Keep a typical repository aligned to current operational truth.",
+    "realityAnchors": [
+      "README.md",
+      "templates/standard/genesis.md"
+    ],
+    "boundaryDefinition": {
+      "kind": "system-boundaries",
+      "items": [
+        "Owns the default framework teaching surfaces."
+      ]
+    },
+    "invariants": [
+      "Present Wizard remains mandatory."
+    ],
+    "activeRisks": [
+      "A clean narrative can outrun repository evidence."
+    ],
+    "nonGoals": [
+      "Do not publish a live local genesis.md file."
+    ]
+  },
+  "presentWizard": {
+    "requiredEntryFields": [
+      "dateOrTimestamp",
+      "actor",
+      "scope",
+      "realityChecked",
+      "decisions",
+      "changes",
+      "verification",
+      "openThreads",
+      "nextStep"
+    ],
+    "ledger": [
+      {
+        "dateOrTimestamp": "2026-04-19",
+        "actor": "Codex",
+        "scope": "validation surface",
+        "realityChecked": [
+          "README.md",
+          "schemas/genesis.schema.json"
+        ],
+        "decisions": [
+          "Keep validation lightweight and structural."
+        ],
+        "changes": [
+          "Add a repository validation workflow and fixtures."
+        ],
+        "verification": [
+          "Run the repository validation script."
+        ],
+        "openThreads": "none",
+        "nextStep": "Use the same validator in CI and before releases."
+      }
+    ]
+  },
+  "layer3": {
+    "readFirst": [
+      "Start with the strongest repo reality anchors."
+    ],
+    "workingRules": [
+      "Do not treat validation success as semantic proof."
+    ],
+    "updateProtocol": [
+      "Update the ledger after meaningful repository work."
+    ]
+  }
+}
