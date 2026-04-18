@@ -1,22 +1,53 @@
 # Examples
 
-The examples show the same framework surviving different engineering realities.
-They are not alternate standards; they are demonstrations of how the same
-three-layer contract adapts to different pressure profiles.
+The example suite is proof material, not authority. Each example shows the same
+frozen framework adapting to a different engineering reality without changing
+the contract defined in `docs/SPEC.md` and operationalized by the templates.
 
-## Included examples
+## How To Read The Suite
+
+Read each example in this order:
+
+1. `context.md` to understand the repository pressures being modeled
+2. `genesis.md` to see how the same framework responds to those pressures
+
+The examples are downstream of the spec and templates. They MUST NOT be treated
+as alternate doctrine, alternate specifications, or private framework variants.
+
+## What Changes Across Examples
+
+The examples vary only in contextual emphasis:
+
+- which reality anchors dominate trust
+- which drift vectors are most dangerous
+- how much Layer 1 detail is needed to stay honest
+- which operator instructions matter most in Layer 3
+
+## What Does Not Change
+
+Across the entire suite, the following remain invariant:
+
+- `genesis.md` is private, local-only continuity memory
+- `genesis.md` is not public repository documentation
+- the three-layer skeleton is mandatory
+- Present Wizard is mandatory
+- Present Wizard remains reverse-chronological, newest-first, top-inserted, and
+  append-only in retained history
+- Layer 3 remains an operating manual for agent and operator behavior
+
+## Included Examples
 
 ### `llm-toolchain/`
 
-Shows a spec-heavy repository where determinism, compatibility, and doc versus
-implementation drift are the main risks.
+Demonstrates a spec-heavy toolchain where compatibility, deterministic output,
+and implementation-versus-documentation drift dominate.
 
 ### `runtime-kernel/`
 
-Shows a language or runtime core where semantic truth, parser behavior, and
-executable meaning matter more than polished narratives.
+Demonstrates a runtime or language core where executable semantics, parser
+alignment, and semantic drift dominate.
 
 ### `product-monorepo/`
 
-Shows a large organizational repo where multiple teams, surfaces, and migration
-pressures create broad drift vectors.
+Demonstrates organizational and architectural scale where ownership sprawl,
+shared contracts, and coordination drift require a broader Layer 1.

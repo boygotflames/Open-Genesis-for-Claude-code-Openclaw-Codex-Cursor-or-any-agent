@@ -1,18 +1,32 @@
 # LLM Toolchain Example Context
 
 This example models a repository that owns a language-facing specification, a
-parser or compiler pipeline, and a toolchain whose behavior must remain
-deterministic across versions.
+compiler or transpiler pipeline, and a toolchain whose emitted behavior must
+remain stable enough for downstream consumers to trust.
 
-## Main pressures
+## Repository Pressures
 
-- specification drift versus implementation reality
-- compatibility promises across generated outputs
-- diagnostics quality and user trust
-- temptation to describe planned capabilities as shipped behavior
+This repo class stresses the framework in specific ways:
 
-## Why the framework matters here
+- contract drift between formal spec text and shipped behavior
+- deterministic output requirements across parser, validator, and emitter stages
+- implementation changes outpacing docs, fixtures, or release notes
+- compatibility surfaces that extend beyond the repository itself
+- tests, snapshots, and generated output acting as primary reality anchors
 
-A toolchain repo accumulates truth in many places: formal docs, tests, fixtures,
-benchmarks, and output snapshots. The continuity artifact has to keep operators
-honest about which source actually wins when those surfaces disagree.
+## Why The Example Looks Different
+
+The framework does not change here. The emphasis changes.
+
+Layer 1 becomes more explicit about spec anchors, fixture truth, and output
+compatibility because those are the places where silent drift causes real
+breakage. Present Wizard remains the same framework ledger, but the example entries
+care more about what was verified against specs, fixtures, and generated output.
+Layer 3 remains the same operating-manual surface, but it directs operators to
+spec and compatibility checks before they generalize claims.
+
+## What This Example Is Proving
+
+This example proves that Genesis Framework can handle a spec-heavy repository
+without turning into a second language standard. The framework stays the same;
+the repository pressures determine which truths need the strongest emphasis.
